@@ -1,11 +1,20 @@
 import React from "react";
-import Landing from "./landing/Landing"
+import Login from "./Login";
 
-function Signup() {
+function Signup({ onLogIn }) {
+
+    function handleSubmit(event) {
+        event.preventDefault();
+        onLogIn()
+    }
     return (
         <div>
         <h2>Please sign up!</h2>
-            <Landing />
+            <form onSubmit={handleSubmit}>
+                <input>Name</input>
+                <button>Submit</button>
+            </form>
+            <Login />
         </div>
     )
 }

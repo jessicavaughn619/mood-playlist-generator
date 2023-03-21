@@ -1,11 +1,13 @@
 import React from "react";
 import Landing from "./landing/Landing"
+import Signup from "../components/Signup"
 
-function Login() {
+function Login({ isLoggedIn }) {
     return (
         <div>
-        <h2>Thanks for logging in!</h2>
-            <Landing />
+            {isLoggedIn ? 
+            <Landing /> :
+            <Signup />}
         </div>
     )
 }

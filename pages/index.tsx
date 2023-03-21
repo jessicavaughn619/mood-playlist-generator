@@ -1,7 +1,6 @@
+import React, { useState } from 'react'
 import Head from 'next/head'
-import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
 import Login from '../components/Login'
 import Signup from '../components/Signup'
 import 'semantic-ui-css/semantic.min.css'
@@ -9,7 +8,12 @@ import 'semantic-ui-css/semantic.min.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-  let isLoggedIn = true;
+  const [isLoggedIn, setIsLoggedIn] = useState("true");
+
+  function handleLogIn() {
+    setIsLoggedIn(true)
+  }
+
   return (
     <>
       <Head>
@@ -19,8 +23,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {isLoggedIn ? 
-      <Login /> :
-      <Signup />
+      <Login 
+      isLoggedIn={isLoggedIn}/> :
+      <Signup 
+      onLogIn={handleLogIn}/>
     }
     </>
   )
