@@ -8,10 +8,10 @@ import 'semantic-ui-css/semantic.min.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-  const [isLoggedIn, setIsLoggedIn] = useState("true");
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
 
   function handleLogIn() {
-    setIsLoggedIn(true)
+    setIsLoggedIn((isLoggedIn) => true)
   }
 
   return (
