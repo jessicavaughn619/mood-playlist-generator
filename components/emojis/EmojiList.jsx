@@ -11,7 +11,7 @@ const EmojiList = () => {
         />
     ))
   return (
-    <div>
+    <div className="emojilist__container">
       <Card.Group itemsPerRow={2}>
         {emojiList}
       </Card.Group></div>

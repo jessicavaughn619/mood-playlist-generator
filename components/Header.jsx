@@ -2,8 +2,8 @@ import React from "react";
 
 function Header() {
     return (
-        <header>
-            Hello!
+        <header className="header__container">
+            HEADER
         </header>
     )
 }

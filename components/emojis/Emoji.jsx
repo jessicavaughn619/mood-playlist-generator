@@ -7,10 +7,12 @@ const Emoji = ({ emoji }) => {
   }
 
   return (
+    <div className="emoji__container">
     <Card onClick={handleClick}>
       {emoji.emoji}
       {emoji.name}
     </Card>
+    </div>
   )
 }
 
